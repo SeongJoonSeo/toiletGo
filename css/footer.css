@@ -1,0 +1,30 @@
+/*작성자: 서성준;
+작성일: 2016.5.18(수) 최초 작성
+CSS용도: 페이지 하단 footer element의 css*/
+
+@font-face {
+    font-family:'NanumGothic';
+    src: url('images/NanumGothic.eot');
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('images/NanumGothic.woff') format('woff'),
+         url('images/NanumGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+footer{	
+	background-color: rgb(0, 192, 221);
+	margin-bottom: 0;
+	height: 25px;
+}
+
+footer p {
+	font-family:'나눔고딕' 'NanumGothic';
+	/*나눔고딕이라고 앞에 쓴 이유는 user PC에 만일 나눔고딕이 설치되어있을 경우 그것을 사용하고
+	아닌 경우 웹폰트를 다운받는다. 웹폰트는 용량이 크기 때문에 loading overhead가 존재하는것이 단점.*/
+	font-size: 10pt;
+	text-align: center;
+	color: white;
+	margin: auto;
+	padding-left: 10px;
+}

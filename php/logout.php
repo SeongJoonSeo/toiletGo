@@ -1,0 +1,11 @@
+<?php
+   	session_start();  
+	unset($_SESSION['no']);
+	unset($_SESSION['id']);
+	unset($_SESSION['nickname']);
+    unset($_SESSION['sta']);
+    unset($_SESSION['nick']);
+    unset($_SESSION['facebook']);
+    unset($_SESSION['state']);
+    header("location:http://165.132.122.160/~u2013147555/index.php");
+?>

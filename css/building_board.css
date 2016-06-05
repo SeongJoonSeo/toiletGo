@@ -1,0 +1,28 @@
+.main_info{
+	border: 1px solid #777;
+}
+.main_pic img{
+	width: 100%;	
+}
+.toilet_info{
+	margin-left: -20px;
+}
+
+a:hover{
+	text-decoration: none;
+}
+.btn{
+	height: 60px;
+	border-color: #777;
+	font-size: 24px;
+	color: black;
+	background-color: rgb(230, 230, 230);
+}
+ 
+.btn:hover{
+	background-color: rgb(210, 210, 210);
+}
+
+.building_name{
+	text-align: center;
+}

@@ -1,0 +1,76 @@
+<?php
+	session_start();
+?>
+
+<!DOCUMENT html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>쾌변 고!</title>
+	<link rel="stylesheet" type="text/css" href="css/slide-menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/home.css" />
+		<!--로그인 필요확인시 필요-->
+	<script> 
+	    var sta = '<?php echo $_SESSION['sta'] ?>';
+	</script>
+	<style>
+		button {
+			background-color: none;
+		}
+	</style>
+</head>
+<body><div id="header" class="reveal-header">
+		<a href="index.php"><img id="logo" src="img/logo.png" /></a>
+	</div>
+	<div id="search-wrap">
+		<form method="get" action="result.php">
+			<input type="search" name="addr" required="required"/>
+			<input type="image" src="img/search.png" width= "40" height="40" />
+			<img src="img/gps.png" id="gps" width="40" height="40" name="coord"  title="내 위치로 찾기"/>
+		</form>
+	</div>
+
+	<div id="mobile-nav"></div>
+	<nav class="reveal-nav">
+      <ul class="menu">
+		<div id="status"></div>
+		<li style="cursor: pointer;"><a href="login.php">
+        	<script type="text/javascript">
+        		if(!sta)
+        			document.write('login');
+        	</script>
+        </a>
+        </li>
+
+        <li style="cursor: pointer;"><a href="php/logout.php">
+        	<script type="text/javascript">
+				if(sta)
+        			document.write('logout');
+        	</script>
+        </a>
+        </li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">PC version</a></li>
+	  </ul>
+	</nav>
+	<div id="site_info2">
+		<h3>만든 사람들</h3>		
+		<p>
+		연세대학교 컴퓨터과학과 <br>
+		인터넷 프로그래밍 팀 <br>
+				-	Team급하니	-		 <br>
+		서성준	김동일	이학수	송치헌	 <br>
+		신지호	오정윤	임두현
+		</p>		
+	</div>
+	<footer>
+		<p>&copy; 급하니</p>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/slide-menu.js"></script>
+	<script type="text/javascript" language="javascript" src="js/gps.js"></script> <!-- 첫 시작화면에서만 쓰는 geolocation api 가능 여부 알려주는 함수들 모음 -->
+</body>
+</html>
